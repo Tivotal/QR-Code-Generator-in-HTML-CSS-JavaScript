@@ -1,0 +1,136 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4070f4;
+}
+
+.wrapper {
+  height: 265px;
+  max-width: 410px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 20px 25px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: height 0.2s ease;
+}
+
+.wrapper.active {
+  height: 530px;
+}
+
+.wrapper header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.wrapper header p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #999;
+}
+
+.wrapper .form {
+  margin: 20px 0 25px;
+}
+
+.wrapper .form input,
+.wrapper .form button {
+  height: 55px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: 0.2s linear;
+}
+
+.wrapper .form input {
+  padding: 0 17px;
+  font-size: 16px;
+  border: 1px solid #999;
+  text-transform: none;
+}
+
+.wrapper .form input::placeholder {
+  color: #999;
+  text-transform: capitalize;
+}
+
+.wrapper .form input:focus {
+  border-color: #4070f4;
+}
+
+.wrapper .form button {
+  color: #fff;
+  margin-top: 20px;
+  background: #4070f4;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.wrapper .form button:hover {
+  background: transparent;
+  color: #4070f4;
+  border: 1px solid #4070f4;
+}
+
+.wrapper .qr-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 33px 0;
+  border-radius: 5px;
+  border: 1px solid #999;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.wrapper.active .qr-code {
+  opacity: 1;
+  transition: opacity 0.2s 0.02s ease;
+  pointer-events: auto;
+}
+
+.wrapper .qr-code img {
+  width: 170px;
+}
+
+@media (max-width: 430px) {
+  .wrapper {
+    height: 255px;
+    padding: 16px 20px;
+  }
+
+  .wrapper.active {
+    height: 510px;
+  }
+
+  .wrapper header p {
+    color: #696969;
+  }
+
+  .wrapper .form input,
+  .wrapper .form button {
+    height: 52px;
+  }
+
+  .wrapper .qr-code img {
+    width: 160px;
+  }
+}
